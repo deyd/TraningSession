@@ -301,7 +301,7 @@ function startTaskMonaca( id )
     taskinfo.id = id;
     taskinfo.startdate = UTCToday(); // 開始日（12時に設定する）
     taskinfo.starttime = UTCCurrentTime(); // 開始時刻
-    taskinfo.tag = getTags( id ) + ",started"; // started 以外のタグはどうなる？
+    taskinfo.tag = getTaskItem( id,"tag" ) + ",started"; // started 以外のタグはどうなる？
 
     var doneFunc = function( data, textState )
     {
@@ -395,6 +395,8 @@ function editTaskMonaca( taskinfo )
 // Task Detail ページでタスクを更新した場合の処理
 function editThisTask()
 {
+    console.log("editThisTask");
+    
     // タスク情報を集める
     var taskinfo = {};
     taskinfo.id = $( "#pg_taskdetail .task div" )
@@ -406,13 +408,11 @@ function editThisTask()
     taskinfo.context = $( "#pg_taskdetail .context" )
         .attr( "context" );
 
-    console.log( JSON.stringify( taskinfo ) );
+    console.log(JSON.stringify(taskinfo));
 
     // Toodledo上のタスクの修正を行う
     var doneFunc = function( data, textState )
     {
-        console.log(JSON.stringify(data));
-        
         // tasklistの情報を直す
         editTaskItemElem( taskinfo.id, "length", taskinfo.length );
 
@@ -486,10 +486,13 @@ function editTaskItemAttr( id, attr, content )
 // タスクリストの、特定タスクの要素を書き換える
 function editTaskItemElem( id, type, content )
 {
-    $( "#tasklist .task[task='" + id + "']" )
-        .attr( type, content ); // taskの属性の情報を更新する
-    $( "#tasklist .task[task='" + id + "'] div." + type + "" )
-        .text( content ); // 表示の更新
+    console.log("editTaskItemElem");
+        
+    var task = getTaskItem(id);
+    console.log(task.html());
+    
+    task.attr( type, content ); // taskの属性の情報を更新する
+    task.find("div." + type).text( content ); // 表示の更新
 }
 
 // Task Detail ページで変更があった場合に、エディットボタンに切り替える

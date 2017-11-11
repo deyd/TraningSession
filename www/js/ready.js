@@ -308,15 +308,19 @@ function WorkMeisterReady()
             // （以前の）div の値を取得する
             var div = $( this )
                 .prev();
+                                
             var val_div = div.text();
 
             // 値が分かっている場合の処理
             if ( val_input != val_div )
             {
                 // エディットマークを付ける
+                div.attr("length", val_input);
                 div.text( val_input );
                 setEditButton();    // アイコンとクリック動作を切り替え
             }
+            
+            console.log(div.html());
 
             // 表示を切り替える
             input.hide();

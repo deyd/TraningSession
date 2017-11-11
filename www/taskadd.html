@@ -1,0 +1,83 @@
+<ons-page id="taskadd" onload="onloadTaskAdd()">
+    <ons-toolbar>
+        <ons-back-button>
+            <ons-icon icon="ion-back">BACK</ons-icon>
+        </ons-back-button>
+        <ons-toolbar-button class="right">
+            <ons-icon icon="ion-compose" onClick="addTaskButton()">
+            </ons-icon>
+            <ons-icon icon="ion-information-circled" onClick="info()">
+            </ons-icon>
+        </ons-toolbar-button>
+        <div class="center">
+            タスクの追加
+        </div>
+    </ons-toolbar>
+    <ons-row class="td-row">
+        <ons-col class="td-titlespace" width="10%">
+            <ons-icon icon="ion-edit">
+            </ons-icon>
+        </ons-col>
+        <ons-col class="title"><input type="text" class="text-input--underbar" style="width:95%" value="デフォルトのタスク名" /></ons-col>
+    </ons-row>
+    <ons-row class="td-row">
+        <ons-col class="td-titlespace" width="10%">
+            <ons-icon icon="ion-eject">
+            </ons-icon>
+        </ons-col>
+        <ons-col class="context">
+            <ons-select>
+                <option value="0">コンテクストなし</option>
+                <option value="1326819">A_0000-0630</option>
+                <option value="1230639">B_0630-0800</option>
+                <option value="1230641">C_0800-1000</option>
+                <option value="1230643">D_1000-1200</option>
+                <option value="1230645">E_1200-1300</option>
+                <option value="1235454">F_1300-1500</option>
+                <option value="1237038">G_1500-1700</option>
+                <option value="1326821">H_1700-1900</option>
+                <option value="1326823">J_1900-2100</option>
+                <option value="1326825">K_2100-2300</option>
+                <option value="1326827">L_2300-0000</option>
+                <option value="1354717">Z_started</option>
+            </ons-select>
+        </ons-col>
+    </ons-row>
+    <ons-row class="td-row">
+        <ons-col class="td-titlespace" width="10%">
+            <ons-icon icon="ion-folder">
+            </ons-icon>
+        </ons-col>
+        <ons-col id="task_folder">
+            example
+        </ons-col>
+    </ons-row>
+    <ons-row class="td-row">
+        <ons-col class="td-titlespace" width="10%">
+            <ons-icon icon="ion-clock">
+            </ons-icon>
+        </ons-col>
+        <ons-col class="length-value" width="10%">0</ons-col>
+        <ons-col class="length" width="80%">
+            <ons-range type="range" modifier="material" max="120" min="0" value="0" step="5" style="width:90%" onChange="changeLength()"/>
+        </ons-col>
+    </ons-row>
+    <ons-row class="td-row">
+        <ons-col class="td-titlespace" width="10%">
+            <ons-icon icon="ion-ios-timer">
+            </ons-icon>
+        </ons-col>
+        <ons-col id="task_starttime">
+            START TIME
+        </ons-col>
+    </ons-row>
+    <ons-row class="td-row">
+        <ons-col class="td-titlespace" width="10%">
+            <ons-icon icon="ion-ios-timer-outline">
+            </ons-icon>
+        </ons-col>
+        <ons-col id="task_duetime">
+            DUE TIME
+        </ons-col>
+    </ons-row>
+</ons-page>

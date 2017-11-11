@@ -1,0 +1,61 @@
+<ons-page id="pg_tasklist">
+    <ons-toolbar>
+        <div class="center">タスクリスト</div>
+        <ons-toolbar-button class="right">
+            <ons-icon icon="ion-plus" onClick="jumpToTaskAdd()">
+            </ons-icon>
+        </ons-toolbar-button>
+    </ons-toolbar>
+    <div id="Area_NumberOfTasks">
+        <div>残りタスク数：</div>
+        <div id="task_num">-----</div>
+    </div>
+    <div id="Area_TimeOfTasks">
+        <div>タスク時間：</div>
+        <div id="task_totaltime">--:--</div>
+    </div>
+    <div id="target">
+        <div id="targetTask">
+            <div id="titleTargetTask">----------</div>
+            <div id="lengthTargetTask"></div>
+        </div>
+        <div id="timer" class="timeup">00:00:00</div>
+    </div>
+    <div>
+        <div class="swipe" style="text-aligh:left">
+            <ons-icon icon="ion-chevron-left"></ons-icon>延期</div>
+        <div class="swipe" style="text-align:center">SWIPE</div>
+        <div class="swipe" style="text-align:right">開始・終了
+            <ons-icon icon="ion-chevron-right"></ons-icon>
+        </div>
+    </div>
+    <ons-gesture-detector>
+        <ul id="tasklist" style="clear:both">
+            <ons-list-header modifier="wm">header</ons-list-header>
+            <li class="task" task="222222" state="started" title="タイトル1" context="1326819" length="30" folder="3803161"
+                duetime="1507911111" starttime="1507111111">
+                <div class="info1">
+                    <div style="display:inline">●</div>
+                    <div style="display:inline">■</div>
+                </div>
+                <div class="info2">
+                    <div class="title">タイトル1</div>
+                    <div class="length" length="30">30</div>
+                    <div class="folder" folder="3803161">Dプロ</div>
+                    <div class="duedate">30</div>
+                </div>
+            </li>
+            <li class="task" task="333333" title="タイトル3">
+                <div class="title">タイトル3</div>
+                <div class="length">30</div>
+                <div class="folder">undefined</div>
+                <div class="duedate">2017/10/10 10:10</div>
+            </li>
+        </ul>
+    </ons-gesture-detector>
+    <div id="aaa"></div>
+    <ons-button onclick="getTasklist()">GET TASK</ons-button>
+    <ons-button onclick="scrollbutton()">SCROLL</ons-button>
+    <ons-button onclick="authorizeWithBrowser()">アクセストークン</ons-button>
+
+</ons-page>

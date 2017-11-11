@@ -1,0 +1,179 @@
+/**/
+
+.started {
+    color: red;
+    font-weight: bold;
+}
+
+[state=started] {
+    color: red;
+    font-weight: bold;
+}
+
+
+/**** tasklist ****/
+
+
+/* 残りタスク数 */
+
+#Area_NumberOfTasks {
+    background-color: #999999;
+    color: #FFFFFF;
+    font-size: 14pt;
+    border: none;
+    clear: both;
+}
+
+#Area_NumberOfTasks div {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    background-color: inherit;
+    float: left;
+    text-align: center;
+    width: 50%;
+    height: 20pt;
+}
+
+
+/* タスク時間 */
+
+#Area_TimeOfTasks {
+    font-size: 14pt;
+    float: none;
+    background-color: #999999;
+    color: #FFFFFF;
+    font-size: 14pt;
+    border: none;
+    clear: both;
+}
+
+#Area_TimeOfTasks div {
+    background-color: inherit;
+    float: left;
+    text-align: center;
+    width: 50%;
+    height: 20pt;
+}
+
+
+/* タイマーエリア */
+
+#target {}
+
+#targetTask {
+    display: none;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px
+}
+
+#titleTargetTask {
+    padding: 10px;
+    font-size: 20pt;
+    text-align: left;
+}
+
+#lengthTargetTask {
+    font-size: 20pt;
+    text-align: left;
+}
+
+#timer {
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    font-size: 40px;
+    clear: both;
+}
+
+#timer.completed {
+    background-color: green;
+    color: white;
+}
+
+#timer.timeup {
+    background-color: red;
+    color: white;
+}
+
+.swipe {
+    float: left;
+    width: 33%;
+}
+
+
+/* リスト */
+
+ul#tasklist {
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+ul#tasklist li {
+    display: flex;
+    border-bottom: solid;
+}
+
+
+/* ヘッダ */
+
+.header {
+    padding: 5px 15px 5px 15px;
+    background-color: blue;
+    color: white;
+    border-bottom: solid;
+    border-bottom-color: white;
+    border-bottom-width: 1px;
+}
+
+
+/* タスク（個別）*/
+
+li {}
+
+ul#tasklist div.info1 {
+    border: solid;
+    border-color: green;
+}
+
+ul#tasklist div.info2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    border: solid;
+    border-color: blue;
+}
+
+#pg_tasklist div.title {
+    width: 100%;
+    padding: 5px;
+    font-size: 16pt;
+}
+
+#pg_tasklist div.length {
+    width: 33%;
+    font-size: 12pt;
+}
+
+#pg_tasklist div.folder {
+    width: 33%;
+}
+
+#pg_tasklist div.duedate {
+    width: 33%;
+    font-size: 10pt;
+}
+
+
+/* taskdetail.html */
+
+.td-row {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.td-titlespace {
+    padding-left: 5px;
+    padding-right: 5px;
+}

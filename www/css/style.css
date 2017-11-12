@@ -166,14 +166,46 @@ ul#tasklist div.info2 {
 }
 
 
+/*******************/
 /* taskdetail.html */
+/*******************/
 
 .td-row {
+    border-bottom: dotted;
+    border-width: 1px;
+    display: flex;
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
-.td-titlespace {
+.td-icon {
+    width:10%;
     padding-left: 5px;
     padding-right: 5px;
+}
+
+#pg_taskdetail ons-icon{}
+
+#pg_taskdetail .td-row>div{
+    border-bottom: dashed;
+    border-width :1px;
+    font-size:medium;
+    width:85%;
+}
+
+
+#pg_taskdetail .title{
+    background-origin: ;
+    background-color: white;
+    height: 40px;
+    font-size: large;
+}
+
+.edited{
+    color : red;
+}
+
+#pg_taskdetail input,select{
+    width:85%;
+    font-size: medium;
 }

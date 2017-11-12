@@ -32,24 +32,31 @@
     <ons-gesture-detector>
         <ul id="tasklist" style="clear:both">
             <ons-list-header modifier="wm">header</ons-list-header>
-            <li class="task" task="222222" state="started" title="タイトル1" context="1326819" length="30" folder="3803161"
+            <li class="task" task="111111" state="started" title="タスク１" context="1326819" length="30" folder="3803161"
                 duetime="1507911111" starttime="1507111111">
                 <div class="info1">
-                    <div style="display:inline">●</div>
-                    <div style="display:inline">■</div>
+                    <div class="parent" style="display:inline">●</div>
+                    <div class="children" style="display:inline">■</div>
                 </div>
                 <div class="info2">
-                    <div class="title">タイトル1</div>
+                    <div class="title">タスク１</div>
                     <div class="length" length="30">30</div>
                     <div class="folder" folder="3803161">Dプロ</div>
                     <div class="duedate">30</div>
                 </div>
             </li>
-            <li class="task" task="333333" title="タイトル3">
-                <div class="title">タイトル3</div>
-                <div class="length">30</div>
-                <div class="folder">undefined</div>
-                <div class="duedate">2017/10/10 10:10</div>
+            <li class="task" task="222222" state="started" title="タスク２" context="1326819" length="30" folder="3803161"
+                duetime="1507911111" starttime="1507111111">
+                <div class="info1">
+                    <div class="parent" style="display:inline">●</div>
+                    <div class="children" style="display:inline">■</div>
+                </div>
+                <div class="info2">
+                    <div class="title">タスク２</div>
+                    <div class="length" length="30">30</div>
+                    <div class="folder" folder="3803161">Dプロ</div>
+                    <div class="duedate">30</div>
+                </div>
             </li>
         </ul>
     </ons-gesture-detector>
@@ -57,5 +64,4 @@
     <ons-button onclick="getTasklist()">GET TASK</ons-button>
     <ons-button onclick="scrollbutton()">SCROLL</ons-button>
     <ons-button onclick="authorizeWithBrowser()">アクセストークン</ons-button>
-
 </ons-page>

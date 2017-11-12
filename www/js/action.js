@@ -39,7 +39,7 @@ function putHeaders()
 function setDatas(data, name)
 {
     var elem = data[name];
-    $( "#pg_taskdetail ." + name +" div" )
+    $( "#pg_taskdetail ." + name +" div div.info-field" )
         .text( elem );  // 表示するテキストにセット
     $( "#pg_taskdetail ." + name )
         .attr( name, elem );    // 要素の属性にセット

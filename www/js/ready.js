@@ -158,6 +158,10 @@ function WorkMeisterReady()
             }
         } );
 
+    /***********************************/
+    /* #pg_taskdetail タスク詳細ページ */
+    /***********************************/
+
     /* taskdetailページ遷移時に情報を渡す */
     $( document )
         .on( "pageinit", "#pg_taskdetail", function()
@@ -232,102 +236,6 @@ function WorkMeisterReady()
 
         } );
 
-    $( document )
-        .on( "click", "#pg_taskdetail .context div", function()
-        {
-            // context情報を読み出す
-            var select = $( this )
-                .next(); // ons-row.context
-            var value = $( this )
-                .parent()
-                .attr( "context" ); // 表示ではなく、contextのid値
-
-            // div を隠して、 input を表示させる
-            $( this )
-                .hide();
-            select.val( value );
-            select.show();
-        } );
-
-    $( document )
-        .on( "change", "#pg_taskdetail .context select", function()
-        {
-
-            // context情報を読み出す
-            var context_select = $( this )
-                .val();
-            var text_select = $( "option:selected", this )
-                .text();
-
-            // div を隠して、 input を表示させる
-            var div = $( this ).prev();
-            var context_div = div.attr("context");
-
-            // 値が分かっている場合の処理
-            if ( context_div != context_select )
-            {
-                $(this).parent().attr("context", context_select);
-                div.text( text_select );    // テキスト書き換え
-                setEditButton();// アイコンとクリック動作を切り替え
-            }
-
-            // 表示を切り替える
-            $( this ).hide();
-            div.show();
-
-        } );
-
-
-    $( document )
-        .on( "click", "#pg_taskdetail .length div", function()
-        {
-
-            // length情報を読み出す
-            var input = $( this )
-                .next(); // ons-row.length
-            var value = $( this )
-                .text();
-
-            // div を隠して、 input を表示させる
-            $( this )
-                .hide();
-            input.val( value );
-            input.show();
-
-        } );
-
-    $( document )
-        .on( "blur", "#pg_taskdetail .length input", function()
-        {
-            var input = $( this ); // input を明示的に
-
-            // input から値を取得する
-            var val_input = $( this )
-                .val();
-
-            // （以前の）div の値を取得する
-            var div = $( this )
-                .prev();
-                                
-            var val_div = div.text();
-
-            // 値が分かっている場合の処理
-            if ( val_input != val_div )
-            {
-                // エディットマークを付ける
-                div.attr("length", val_input);
-                div.text( val_input );
-                setEditButton();    // アイコンとクリック動作を切り替え
-            }
-            
-            console.log(div.html());
-
-            // 表示を切り替える
-            input.hide();
-            div.show();
-
-        } );
-
     /* taskaddページ遷移時に情報を渡す */
     $( document )
         .on( "pageinit", "#taskadd", function()
@@ -339,5 +247,26 @@ function WorkMeisterReady()
             $( "#taskadd .length input" )
                 .val( 0 );
         } );
+
+    $( document )
+        .on( "click", "#pg_taskdetail .info-field", function()
+        {
+            console.log( "#PG_TASKDETAIL DIV.info-field click" );
+
+            showEditForm( $( this ) );
+        } );
+
+    $( document )
+        .on( "blur", "#pg_taskdetail .edit-field", function()
+        {
+
+            console.log( "#pg_taskdetail CONTEXT SELECT blur" );
+
+            var obj = $( this );
+
+            endEditForm( obj );
+
+        } );
+
 
 }

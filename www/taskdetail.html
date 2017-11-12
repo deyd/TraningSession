@@ -11,33 +11,30 @@
             タスク詳細
         </div>
     </ons-toolbar>
-    <ons-row class="td-row">
-        <ons-col class="td-titlespace" width="10%">
-            <ons-icon icon="ion-edit">
-            </ons-icon>
-        </ons-col>
-        <ons-col class="title">
-            <div></div>
-        </ons-col>
-    </ons-row>
-    <ons-row class="td-row">
-        <ons-col class="td-titlespace" width="10%">
-            <ons-icon icon="ion-information-circled">id
-            </ons-icon>
-        </ons-col>
-        <ons-col class="task">
-            <div></div>
-        </ons-col>
-    </ons-row>
+    <!-- TITLE -->
+    <div class="title td-row">
+        <ons-icon class="td-icon" icon="ion-edit">
+        </ons-icon>
+        <div>
+            <div class="info-field" type="title">TITLE</div>
+            <input class="edit-field" type="text" value="" style="display:none" />
+        </div>
+    </div>
+    <!-- TASK(ID) -->
+    <div class="task td-row" task="123456">
+        <ons-icon class="td-icon" icon="ion-information-circled">
+        </ons-icon>
+        <div>
+            <div>ID</div>
+        </div>
+    </div>
     <!-- CONTEXT -->
-    <ons-row class="td-row">
-        <ons-col class="td-titlespace" width="10%">
-            <ons-icon icon="ion-eject">context
-            </ons-icon>
-        </ons-col>
-        <ons-col class="context">
-            <div>CONTEXT</div>
-            <select style="display:none">
+    <div class="context td-row" context="0">
+        <ons-icon class="td-icon" icon="ion-eject"></ons-icon>
+        <div>
+            <div class="info-field" type="context">CONTEXT</div>
+            <select class="edit-field" style="display:none">
+                <option value="0">NO CONTEXT</option>
                 <option value="1326819">A_0000-0630</option>
                 <option value="1230639">B_0630-0800</option>
                 <option value="1230641">C_0800-1000</option>
@@ -51,63 +48,71 @@
                 <option value="1326827">L_2300-0000</option>
                 <option value="1354717">Z_started</option>
             </select>
-                
-        </ons-col>
-    </ons-row>
-    <ons-row class="td-row">
-        <ons-col class="td-titlespace" width="10%">
-            <ons-icon icon="ion-folder">folder
-            </ons-icon>
-        </ons-col>
-        <ons-col class="folder">
-            <div></div>
-        </ons-col>
-    </ons-row>
+        </div>
+    </div>
+    <!-- FOLDER -->
+    <div class="folder td-row" folder="0">
+        <ons-icon class="td-icon" icon="ion-folder"></ons-icon>
+        <div>
+            <div class="info-field" type="folder">FOLDERNAME</div>
+            <select class="edit-field" style="display:none">
+                <option value="0">NO FOLDER</option>
+                <option value="3901305">DH材加工長寿命化</option>
+                <option value="3803161">Dプロ</option>
+                <option value="3788507">GTD</option>
+                <option value="3617103">その他業務</option>
+                <option value="3901303">ダントツ造型工場</option>
+                <option value="3578172">プライベート</option>
+                <option value="3584622">冷却穴平滑化</option>
+                <option value="3798479">加工プロセス再構築</option>
+                <option value="3901301">次世代造型工場構想</option>
+                <option value="3578166">深穴高能率化</option>
+                <option value="3866827">移動</option>
+                <option value="3641963">走る</option>
+                <option value="3901307">長寿命刃具</option>
+                <option value="3931123">難削材加工</option>
+            </select>
+        </div>
+    </div>
     <!-- LENGTH -->
-    <ons-row class="td-row">
-        <ons-col class="td-titlespace" width="10%">
-            <ons-icon icon="ion-clock">length
-            </ons-icon>
-        </ons-col>
-        <ons-col class="length">
-            <div>length</div>
+    <div class="length td-row" length="30">
+        <ons-icon class="td-icon" icon="ion-clock"></ons-icon>
+        <div class="length">
+            <div class="info-field" type="length">LENGTH</div>
+            <input class="edit-field" type="number" value="" style="display:none" />
+        </div>
+    </div>
+    <!-- STARTDATE -->
+    <div class="startdate td-row" class="td-row">
+        <ons-icon class="td-icon" icon="ion-ios-timer"></ons-icon>
+        <div class="startdate">
+            <div>STARTDATE</div>
             <input type="number" value="" style="display:none" />
-        </ons-col>
-    </ons-row>
-    <ons-row class="td-row">
-        <ons-col class="td-titlespace" width="10%">
-            <ons-icon icon="ion-ios-timer">start
-            </ons-icon>
-        </ons-col>
-        <ons-col class="startdate">
-            <div></div>
-        </ons-col>
-    </ons-row>
-    <ons-row class="td-row">
-        <ons-col class="td-titlespace" width="10%">
-            <ons-icon icon="ion-ios-timer">start
-            </ons-icon>
-        </ons-col>
-        <ons-col class="starttime">
-            <div></div>
-        </ons-col>
-    </ons-row>
-    <ons-row class="td-row">
-        <ons-col class="td-titlespace" width="10%">
-            <ons-icon icon="ion-ios-timer-outline">due
-            </ons-icon>
-        </ons-col>
-        <ons-col class="duedate">
-            <div></div>
-        </ons-col>
-    </ons-row>
-    <ons-row class="td-row">
-        <ons-col class="td-titlespace" width="10%">
-            <ons-icon icon="ion-ios-timer-outline">due
-            </ons-icon>
-        </ons-col>
-        <ons-col class="duetime">
-            <div></div>
-        </ons-col>
-    </ons-row>
+        </div>
+    </div>
+    <!-- STARTTIME -->
+    <div class="starttime td-row">
+        <ons-icon class="td-icon" icon="ion-ios-timer"></ons-icon>
+        <div>
+            <div>STARTTIME</div>
+            <input type="number" value="" style="display:none" />
+        </div>
+    </div>
+    <!-- DUEDATE -->
+    <div class="duedate td-row">
+        <ons-icon class="td-icon" icon="ion-ios-timer-outline"></ons-icon>
+        <div>
+            <div>DUEDATE</div>
+            <input type="number" value="" style="display:none" />
+        </div>
+    </div>
+    <!-- DUETIME -->
+    <div class="duetime td-row">
+        <ons-icon class="td-icon" icon="ion-ios-timer-outline">
+        </ons-icon>
+        <div>
+            <div>DUETIME</div>
+            <input type="number" value="" style="display:none" />
+        </div>
+    </div>
 </ons-page>

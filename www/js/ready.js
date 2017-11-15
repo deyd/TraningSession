@@ -85,7 +85,7 @@ function WorkMeisterReady()
     $( document )
         .on( "swiperight", ".task", function()
         {
-            console.log( "swipeleft" )
+            console.log( "swipeleft" );
 
             var attrTag = $( this )
                 .attr( "tag" ); // タスクのtagを読み出す
@@ -266,6 +266,44 @@ function WorkMeisterReady()
 
             endEditForm( obj );
 
+        } );
+    
+        $( document )
+        .on( "click", "#pg_taskdetail .info-date-field", function()
+        {
+            console.log( "#PG_TASKDETAIL DIV.info-date-field click" );
+            var input = $(this).next();
+
+            input.show();
+//            input.focus();
+
+        } );
+
+        $( document )
+        .on( "click", "#pg_taskdetail .info-time-field", function()
+        {
+            console.log( "#PG_TASKDETAIL DIV.info-date-field click" );
+            var input = $(this).next();
+
+            input.show();
+//            input.focus();
+
+        } );
+
+
+        $( document ).on( "focus", "#pg_taskdetail .picker-input", function(){
+            alert("TEST");
+        });
+
+        $( document ).on( "blur", "#pg_taskdetail .edit-date-field", function()
+        {
+            console.log( "#pg_taskdetail .edit-date-field blur" );
+
+            var obj = $( this );
+            var div = obj.prev();
+            
+//            obj.hide();
+            div.show();
         } );
 
 

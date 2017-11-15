@@ -195,7 +195,6 @@ ul#tasklist div.info2 {
 
 
 #pg_taskdetail .title{
-    background-origin: ;
     background-color: white;
     height: 40px;
     font-size: large;
@@ -206,6 +205,9 @@ ul#tasklist div.info2 {
 }
 
 #pg_taskdetail input,select{
+    background-color: inherit;
+    outline:0;
+    border: 0;
     width:85%;
     font-size: medium;
 }

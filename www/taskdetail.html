@@ -1,4 +1,10 @@
 <ons-page id="pg_taskdetail">
+    <script>
+        $( 'input.edit-date-field' )
+        .dateDropper();
+        $( 'input.edit-time-field' )
+        .timeDropper();
+    </script>
     <ons-toolbar>
         <ons-back-button>
             <ons-icon icon="ion-back"></ons-icon>
@@ -17,7 +23,7 @@
         </ons-icon>
         <div>
             <div class="info-field" type="title">TITLE</div>
-            <input class="edit-field" type="text" value="" style="display:none" />
+            <input class="edit-field" type="text" style="display:none" />
         </div>
     </div>
     <!-- TASK(ID) -->
@@ -86,33 +92,31 @@
     <div class="startdate td-row" class="td-row">
         <ons-icon class="td-icon" icon="ion-ios-timer"></ons-icon>
         <div class="startdate">
-            <div>STARTDATE</div>
-            <input type="number" value="" style="display:none" />
+            <div class="info-date-field">STARTDATE</div>
+            <input class="edit-date-field" type="text" value="" style="display:none" />
         </div>
     </div>
     <!-- STARTTIME -->
     <div class="starttime td-row">
         <ons-icon class="td-icon" icon="ion-ios-timer"></ons-icon>
         <div>
-            <div>STARTTIME</div>
-            <input type="number" value="" style="display:none" />
+            <div class="info-time-field">STARTTIME</div>
+            <input class="edit-time-field" type="text" value="" style="display:none" />
         </div>
     </div>
     <!-- DUEDATE -->
-    <div class="duedate td-row">
-        <ons-icon class="td-icon" icon="ion-ios-timer-outline"></ons-icon>
-        <div>
-            <div>DUEDATE</div>
-            <input type="number" value="" style="display:none" />
-        </div>
+<div class="duedate td-row">
+    <ons-icon class="td-icon" icon="ion-ios-timer-outline"></ons-icon>
+    <div>
+        <input class="edit-date-field" type="text" data-default-date="11-13-2016" data-format="Y/m/d" data-max-year="2018" />
     </div>
-    <!-- DUETIME -->
+</div>    <!-- DUETIME -->
     <div class="duetime td-row">
         <ons-icon class="td-icon" icon="ion-ios-timer-outline">
         </ons-icon>
         <div>
-            <div>DUETIME</div>
-            <input type="number" value="" style="display:none" />
+            <div class="info-time-field">DUETIME</div>
+            <input class="edit-time-field" type="text" value="" style="display:none" />
         </div>
     </div>
 </ons-page>

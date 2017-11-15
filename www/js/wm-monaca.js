@@ -386,7 +386,7 @@ function editTaskMonaca( taskinfo )
     var doneFunc = function( data, textState ) {};
     var failFunc = function( jqXHR, textState, errorThrown )
     {
-        alert( "通信に失敗" )
+        alert( "通信に失敗" );
     };
 
     editTasks( taskinfo, doneFunc, failFunc );
@@ -419,7 +419,7 @@ function editThisTask()
         // ページをポップする
         document.querySelector( '#myNavigator' )
             .popPage();
-    }
+    };
 
     var failFunc = function( jqXHR, textState, errorThrown )
     {
@@ -609,7 +609,7 @@ function timerCountDown( start, length )
     {
         rest = -rest;
         $( "#timer" )
-            .addClass( "timeup" )
+            .addClass( "timeup" );
     }
 
     var s = rest % 60;
